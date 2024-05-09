@@ -76,6 +76,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(159, 150);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBoxUsuario_Click);
             // 
             // textBox1
             // 
@@ -83,7 +84,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(151, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // textBox3
             // 
@@ -91,6 +92,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(154, 20);
             this.textBox3.TabIndex = 6;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBoxSenha_TextChanged);
             // 
             // button1
             // 
@@ -101,6 +103,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // button2
             // 
@@ -111,6 +114,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // Form1
             // 
