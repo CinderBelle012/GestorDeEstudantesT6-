@@ -43,15 +43,14 @@ namespace GestorDeEstudantesT6
             MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
 
-            MySqlDataAdapter MeuadaptadorSql = new MySqlDataAdapter();
+            MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
             DataTable minhaTabela = new DataTable();
-            DataTable maxhaTabela = new DataTable();
             MySqlCommand meuComandoSql = new MySqlCommand("SELECT * FROM `usuarios` WHERE `nome_de_usuario` = @usuario AND `senha` = @senha", meuBancoDeDados.getConexao);
             meuComandoSql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = textBoxUsuario.Text;
             meuComandoSql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text; 
 
-            MeuadaptadorSql.SelectCommand = meuComandoSql;
-            MeuadaptadorSql.Fill(minhaTabela);
+            meuAdaptadorSql.SelectCommand = meuComandoSql;
+            meuAdaptadorSql.Fill(minhaTabela);
 
             if (minhaTabela.Rows.Count > 0)
             {
