@@ -198,6 +198,7 @@
             this.buttonEnviarFoto.TabIndex = 18;
             this.buttonEnviarFoto.Text = "Enviar Foto";
             this.buttonEnviarFoto.UseVisualStyleBackColor = true;
+            this.buttonEnviarFoto.Click += new System.EventHandler(this.buttonEnviarFoto_Click);
             // 
             // buttonCancelar
             // 
@@ -208,6 +209,7 @@
             this.buttonCancelar.TabIndex = 19;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // buttonCadastrar
             // 
@@ -218,6 +220,7 @@
             this.buttonCadastrar.TabIndex = 20;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // FormInserirEstudante
             // 
