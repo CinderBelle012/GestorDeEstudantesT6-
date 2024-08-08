@@ -36,19 +36,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerNascimento = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBoxGênero = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
+            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.textBoxTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxEndereço = new System.Windows.Forms.TextBox();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBoxUsuario = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFoto = new System.Windows.Forms.PictureBox();
             this.buttonEnviarFoto = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonCadastrar = new System.Windows.Forms.Button();
-            this.groupBoxGênero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxNome
@@ -97,9 +97,10 @@
             // 
             // dateTimePickerNascimento
             // 
+            this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNascimento.Location = new System.Drawing.Point(122, 78);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
-            this.dateTimePickerNascimento.Size = new System.Drawing.Size(163, 20);
+            this.dateTimePickerNascimento.Size = new System.Drawing.Size(95, 20);
             this.dateTimePickerNascimento.TabIndex = 10;
             // 
             // label4
@@ -112,37 +113,37 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Gênero";
             // 
-            // groupBoxGênero
+            // groupBox1
             // 
-            this.groupBoxGênero.Controls.Add(this.radioButton2);
-            this.groupBoxGênero.Controls.Add(this.radioButton1);
-            this.groupBoxGênero.Location = new System.Drawing.Point(99, 118);
-            this.groupBoxGênero.Name = "groupBoxGênero";
-            this.groupBoxGênero.Size = new System.Drawing.Size(200, 56);
-            this.groupBoxGênero.TabIndex = 12;
-            this.groupBoxGênero.TabStop = false;
+            this.groupBox1.Controls.Add(this.radioButtonMasculino);
+            this.groupBox1.Controls.Add(this.radioButtonFeminino);
+            this.groupBox1.Location = new System.Drawing.Point(99, 118);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 56);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // radioButtonMasculino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(111, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(73, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Masculino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonMasculino.AutoSize = true;
+            this.radioButtonMasculino.Location = new System.Drawing.Point(111, 22);
+            this.radioButtonMasculino.Name = "radioButtonMasculino";
+            this.radioButtonMasculino.Size = new System.Drawing.Size(73, 17);
+            this.radioButtonMasculino.TabIndex = 1;
+            this.radioButtonMasculino.Text = "Masculino";
+            this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radioButtonFeminino
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 22);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(67, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Feminino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonFeminino.AutoSize = true;
+            this.radioButtonFeminino.Checked = true;
+            this.radioButtonFeminino.Location = new System.Drawing.Point(18, 22);
+            this.radioButtonFeminino.Name = "radioButtonFeminino";
+            this.radioButtonFeminino.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonFeminino.TabIndex = 0;
+            this.radioButtonFeminino.TabStop = true;
+            this.radioButtonFeminino.Text = "Feminino";
+            this.radioButtonFeminino.UseVisualStyleBackColor = true;
             // 
             // textBoxTelefone
             // 
@@ -161,13 +162,13 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Telefone";
             // 
-            // textBoxEndereço
+            // textBoxEndereco
             // 
-            this.textBoxEndereço.Location = new System.Drawing.Point(122, 229);
-            this.textBoxEndereço.Multiline = true;
-            this.textBoxEndereço.Name = "textBoxEndereço";
-            this.textBoxEndereço.Size = new System.Drawing.Size(163, 56);
-            this.textBoxEndereço.TabIndex = 16;
+            this.textBoxEndereco.Location = new System.Drawing.Point(122, 229);
+            this.textBoxEndereco.Multiline = true;
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(163, 56);
+            this.textBoxEndereco.TabIndex = 16;
             // 
             // label6
             // 
@@ -179,15 +180,15 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Endereço";
             // 
-            // pictureBoxUsuario
+            // pictureBoxFoto
             // 
-            this.pictureBoxUsuario.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxUsuario.Image")));
-            this.pictureBoxUsuario.Location = new System.Drawing.Point(87, 306);
-            this.pictureBoxUsuario.Name = "pictureBoxUsuario";
-            this.pictureBoxUsuario.Size = new System.Drawing.Size(138, 139);
-            this.pictureBoxUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUsuario.TabIndex = 17;
-            this.pictureBoxUsuario.TabStop = false;
+            this.pictureBoxFoto.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFoto.Image")));
+            this.pictureBoxFoto.Location = new System.Drawing.Point(87, 306);
+            this.pictureBoxFoto.Name = "pictureBoxFoto";
+            this.pictureBoxFoto.Size = new System.Drawing.Size(138, 139);
+            this.pictureBoxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFoto.TabIndex = 17;
+            this.pictureBoxFoto.TabStop = false;
             // 
             // buttonEnviarFoto
             // 
@@ -230,12 +231,12 @@
             this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonEnviarFoto);
-            this.Controls.Add(this.pictureBoxUsuario);
-            this.Controls.Add(this.textBoxEndereço);
+            this.Controls.Add(this.pictureBoxFoto);
+            this.Controls.Add(this.textBoxEndereco);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxTelefone);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.groupBoxGênero);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePickerNascimento);
             this.Controls.Add(this.label3);
@@ -244,10 +245,12 @@
             this.Controls.Add(this.textBoxNome);
             this.Controls.Add(this.label2);
             this.Name = "FormInserirEstudante";
-            this.Text = "FormInserirEstudante";
-            this.groupBoxGênero.ResumeLayout(false);
-            this.groupBoxGênero.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsuario)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SGA - Novo Cadastro";
+            this.Load += new System.EventHandler(this.FormInserirEstudante_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,14 +265,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerNascimento;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBoxGênero;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButtonMasculino;
+        private System.Windows.Forms.RadioButton radioButtonFeminino;
         private System.Windows.Forms.TextBox textBoxTelefone;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxEndereço;
+        private System.Windows.Forms.TextBox textBoxEndereco;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBoxUsuario;
+        private System.Windows.Forms.PictureBox pictureBoxFoto;
         private System.Windows.Forms.Button buttonEnviarFoto;
         private System.Windows.Forms.Button buttonCancelar;
         private System.Windows.Forms.Button buttonCadastrar;
