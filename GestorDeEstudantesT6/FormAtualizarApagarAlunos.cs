@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -117,7 +118,7 @@ namespace GestorDeEstudantesT6
 
         private void textBoxId_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void FormAtualizarApagarAlunos_Load(object sender, EventArgs e)
@@ -142,11 +143,28 @@ namespace GestorDeEstudantesT6
 
         private void buttonBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+
+            }
+            catch
+            {
+                MessageBox.Show("Insira um ID válida",
+                    "ID inválida",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+
+
+
+
+
+
+
             // Busca estudante pela ID.
             int id = Convert.ToInt32(textBoxId.Text);   
             MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
-            MySqlCommand comando = new MySqlCommand("SELECT ´ id´,´none`,´sobrenome´,`nascimento´,`genero´,`telefone´,`endereco´,`foto´,`FROM´,`estudantes´, `WHERE` `id` ="= + id,
+            MySqlCommand comando = new MySqlCommand("SELECT ´ id´,´none`,´sobrenome´,`nascimento´,`genero´,`telefone´,`endereco´,`foto´,`FROM´,`estudantes´, `WHERE` `id` =" + id,
                 meuBancoDeDados.getConexao);
 
             DataTable tabela = estudante.getEstudantes(comando);
@@ -170,13 +188,22 @@ namespace GestorDeEstudantesT6
                 }
 
                 // A foto
-                byte[] image = (byte[])tabela.Rows[0]["fotos"];
+                byte[] imagem = (byte[])tabela.Rows[0]["fotos"];
                 //"objeto" intermediario entre a foto que está na tabela.
                 // e a foto que está salva no banco de dados. 
                 MemoryStream FotoDoAluno = new MemoryStream(imagem);
                 //resconstroi a imagem base em um "memory Stream"
-                pictureBoxFoto.Image = image.FromStream(FotoDoAluno);
+                pictureBoxFoto.Image = Image.FromStream(FotoDoAluno);
 
+            }
+        }
+
+        private void textBoxId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) &&
+                            !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

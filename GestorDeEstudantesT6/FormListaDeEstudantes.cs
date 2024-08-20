@@ -86,6 +86,15 @@ namespace GestorDeEstudantesT6
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
             // Atualiza a lista de alunos.
+            // Preenche a tabela com as informações do banco de dados:
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM `estudantes`"); // Comando para selecionar os dados da tabela estudantes.
+            dataGridViewListaDeEstudantes.ReadOnly = true; // Define a tabela como sendo "somente leitura"
+            DataGridViewImageColumn colunaDeFotos = new DataGridViewImageColumn(); // Cria a coluna que irá receber as fotos.
+            dataGridViewListaDeEstudantes.RowTemplate.Height = 80; // Definir a altura máxima das linhas da tabela em 80 pixels.
+            dataGridViewListaDeEstudantes.DataSource = estudante.getEstudantes(comando); // Define a fonte de dados da tabela (de onde virão os dados).
+            colunaDeFotos = (DataGridViewImageColumn)dataGridViewListaDeEstudantes.Columns[7]; // Determina QUEM será a coluna de fotos.
+            colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch; // Estica as imagens na coluna de fotos.
+            dataGridViewListaDeEstudantes.AllowUserToAddRows = false;
         }
 
         private void dataGridViewListaDeEstudantes_CellContentClick(object sender, DataGridViewCellEventArgs e)

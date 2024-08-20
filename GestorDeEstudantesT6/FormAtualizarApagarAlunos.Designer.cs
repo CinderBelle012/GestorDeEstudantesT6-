@@ -233,6 +233,7 @@
             this.textBoxId.Size = new System.Drawing.Size(79, 20);
             this.textBoxId.TabIndex = 38;
             this.textBoxId.TextChanged += new System.EventHandler(this.textBoxId_TextChanged);
+            this.textBoxId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxId_KeyPress);
             // 
             // label7
             // 

@@ -35,5 +35,10 @@ namespace GestorDeEstudantesT6
                 new FormAtualizarApagarAlunos();
             formAtualizarApagarAlunos.Show();
         }
+
+        private void FormMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
